@@ -16,7 +16,7 @@ nav {
 
 .nav-item {
     border: 1px solid;
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -28,11 +28,23 @@ nav {
     display: flex;
 }
 
-.banner-img {
+.nav-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.banner {
     height: 300px;
     background-image: url(https://picsum.photos/1000);
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 24px;
 }
 
 .profile-container {
@@ -52,4 +64,84 @@ nav {
     background-position: center;
     border-radius: 50%;
     width: 50px;
+}
+
+/* Vision & Mission Section */
+.vision-mission {
+    padding: 20px;
+    background-color: #eaeaea;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.vision-mission h2 {
+    margin-bottom: 10px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile-item {
+height: 100px;
+text-align: -webkit-center
+}
+
+.profile-img {
+height: 50px;
+background-image: url(https://picsum.photos/250);
+background-size: cover;
+background-position: center;
+border-radius: 50%;
+width: 50px;
+}
+
+/* Contact Form Section */
+.contact-form {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 10px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }

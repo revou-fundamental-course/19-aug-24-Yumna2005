@@ -8,16 +8,15 @@
         <link rel="stylesheet" href="CSS\style.css">
       </head>
       <body>
-        <nav>
+        <nav class="nav-header">
             <header>
                 <div class="logo-icon"></div>
             </header>
 
             <section class="nav-container">
-                <a href="#" class="nav-item">Home</a>
-                <a href="#"class="nav-item">Our Profile</a>
-                <a href="#"class="nav-item">Achievment</a>
-                <a href="#"class="nav-item">Massage Us</a>
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#profile"class="nav-item">Our Profile</a>
+                <a href="#contact"class="nav-item">Massage Us</a>
             </section>
         </nav>
 
@@ -25,21 +24,27 @@
 
         <main>
           <article>
-            <header>
-              <h1>Welcome</h1>
-            </header>
-
-            <p>loreum</p>
-
-            <div class="banner-img"></div>
+            <section id="home" class="banner">
+              <div class="welcome-message">
+                  <h1>Welcome, <span id="userName"></span>!</h1>
+              </div>
+          </section>
           </article>
 
           <hr/>
 
-          <section>
+          <section id="profile">
             <header>
               <h1>Our Profile</h1>
             </header>
+
+            <section>
+              <div class="vision-mission">
+                <h2>Vision & Mission</h2>
+                <p><strong>Vision:</strong> To be a leading educational institution that... [complete the vision]</p>
+                <p><strong>Mission:</strong> To provide quality education through... [complete the mission]</p>
+            </div>
+            </section>
 
             <section class="profile-container">
               <div class="profile-item">
@@ -60,17 +65,23 @@
             </section>
           </section>
 
-          <section>
-            <form>
-
+          <section id="contact" class="contact-form">
+            <h2>Message Us</h2>
+            <form id="messageForm" onsubmit="return validateForm()">
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <input type="email" id="email" name="email" placeholder="Your Email">
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                <input type="submit" value="Submit">
             </form>
-            <div></div>
-          </section>
+            <div id="formData"></div>
+         </section>
         </main>
 
         <footer>
           <p>Made by Yumna</p>
         </footer>
 
+        <script src="JS\script.js"></script>
       </body>
       </html>
